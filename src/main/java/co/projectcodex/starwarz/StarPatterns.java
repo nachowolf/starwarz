@@ -14,6 +14,11 @@ public class StarPatterns {
 
     public static void line(int size) {
 
+        for(int i =0; i < size;i++){
+            System.out.print("* ");
+        }
+
+
     }
     
     /**
@@ -41,6 +46,15 @@ public class StarPatterns {
      * @param size
      */
     public static void squareStars(int size) {
+        for(int i = 0; i < size; i++){
+            for (int j = 0;j<size;j++){
+                System.out.print("* ");
+
+
+            }
+            System.out.print("\n");
+
+        }
 
     }
 
@@ -73,7 +87,18 @@ public class StarPatterns {
      * @param size
      */
     public static void triangleBottomBase(int size) {
+        int hold = 1;
+        for(int i = 0; i < size; i++){
+            for(int j = 0 ;j<hold;j++){
+                System.out.print("* ");
 
+            }
+            if(hold!=size) {
+                hold++;
+            }
+            System.out.print("\n");
+
+        }
     }
 
     /**
@@ -102,7 +127,16 @@ public class StarPatterns {
      */
 
     public static void triangleTopBase(int size) {
+        int hold = size;
+        for(int i = 0; i < size; i++){
+           for(int j = 0 ;j<hold;j++){
+                System.out.print("* ");
 
+            }
+            hold--;
+            System.out.print("\n");
+
+        }
     }
 
     /**
@@ -128,6 +162,29 @@ public class StarPatterns {
      * @param size
      */
     public static void emptySquare(int size) {
+        for(int i = 0; i < size; i++){
+            if(i==0 || i==size-1){
+                for(int j = 0 ;j<size;j++){
+                        System.out.print("* ");
+                }
+            }
+            else{
+                for(int j = 0 ;j<size;j++){
+                    if(j==0 || j == size-1){
+                        System.out.print("* ");
+                    }
+                    else{
+                        System.out.print("0 ");
+                    }
+                }
+
+
+
+            }
+
+            System.out.print("\n");
+
+        }
 
     }
 
